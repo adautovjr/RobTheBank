@@ -29,7 +29,7 @@ public class VehicleSpawner : MonoBehaviour
             lane = UnityEngine.Random.Range(0, lanes.Length - 1);
         }
         busyLanes.Add(lane);
-        Instantiate(cars[car], new Vector3(lanes[lane].transform.position.x, lanes[lane].transform.position.y, lanes[lane].transform.position.z), lanes[lane].transform.rotation);
+        Instantiate(cars[0], new Vector3(lanes[lane].transform.position.x, lanes[lane].transform.position.y, lanes[lane].transform.position.z), lanes[lane].transform.rotation);
         Invoke("SpawnCar", UnityEngine.Random.Range(0.1f, 1f));
         StartCoroutine(LaneDebuser(lane));
     }

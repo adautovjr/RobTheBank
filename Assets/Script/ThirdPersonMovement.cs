@@ -14,7 +14,6 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     public MoneySpawner moneySpawner;
     public Text uiMoneyCounter;
-
     private bool hasMoneyBag = false;
     private int score;
 
@@ -78,5 +77,12 @@ public class ThirdPersonMovement : MonoBehaviour
     private void UpdateScore()
     {
         uiMoneyCounter.text = "Total subtraído não tão legalmente: $ " + score.ToString();
+    }
+
+    public void ToggleRagdoll(){
+    }
+
+    public void ToggleCollision(){
+
     }
 }
