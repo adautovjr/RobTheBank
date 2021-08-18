@@ -38,7 +38,8 @@ public class VehicleMovement : MonoBehaviour
     {
         if (other.gameObject.layer == CARS)
         {
-            speed = MIN_SPEED;
+            speed = MIN_SPEED - 20;
+            other.gameObject.GetComponent<VehicleMovement>().speed = MIN_SPEED - 20;
         }
         else if (other.gameObject.layer == DESPAWNER)
         {
@@ -50,7 +51,7 @@ public class VehicleMovement : MonoBehaviour
     {
         if (other.collider.gameObject.layer == PLAYER)
         {
-            other.collider.enabled = false;
+            other.collider.gameObject.GetComponent<ThirdPersonMovement>().ToggleRagdoll();
             crashed = true;
         }
         else if (other.collider.gameObject.layer == CARS)
