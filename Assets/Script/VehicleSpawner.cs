@@ -12,7 +12,7 @@ public class VehicleSpawner : MonoBehaviour
     void Start()
     {
         busyLanes = new ArrayList();
-        StartCoroutine(WaitCutscene(1.5f));
+        StartCoroutine(WaitCutscene(2f));
     }
 
     void Update()

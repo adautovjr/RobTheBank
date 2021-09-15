@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dropoff
   - MoneyBag
+  - Powerup
   layers:
   - Default
   - TransparentFX
